@@ -80,6 +80,7 @@
 // export default Projects;
 
 import React, { useState } from "react";
+import effortease from "../../public/effortease.png";
 import AutoSnakeGame from "../../public/AutoSnakeGame.png";
 import SnakeGame from "../../public/SnakeGame.png";
 import tictactoe from "../../public/tictactoe.jpeg";
@@ -91,6 +92,15 @@ function Projects() {
   const cardItem = [
     {
       id: 1,
+      logo: effortease,
+      name: "Student Resorce Hub",
+      description: "MERN Stack Project",
+      reviewLink:
+        "https://www.linkedin.com/posts/satyam-gaikwad-27a7a724b_innovation-effortease-techforstudents-activity-7230963266670256128-Vy7N?utm_source=share&utm_medium=member_android",
+      sourceLink: "https://github.com/SatAlgo/effortEase",
+    },
+    {
+      id: 2,
       logo: AutoSnakeGame,
       name: "Automated Snake Game",
       description: "Using Tkinter Python.",
@@ -99,7 +109,7 @@ function Projects() {
       sourceLink: "https://github.com/SatAlgo/Snake-Game",
     },
     {
-      id: 2,
+      id: 3,
       logo: SnakeGame,
       name: "Snake Game",
       description: "Using Tkinter Python.",
@@ -108,7 +118,7 @@ function Projects() {
       sourceLink: "https://github.com/SatAlgo/Snake-Game",
     },
     {
-      id: 3,
+      id: 4,
       logo: tictactoe,
       name: "Tic-Tac-Toe Game",
       description: "Using Tkinter Python",
@@ -117,7 +127,7 @@ function Projects() {
       sourceLink: "https://github.com/SatAlgo/Tic-Tac-Toe-Game",
     },
     {
-      id: 4,
+      id: 5,
       logo: noutrify,
       name: "NoutriFy",
       description: "Using HTML",

@@ -1,6 +1,8 @@
 import React from "react";
 import codeforces from "../../public/codeforces.png";
 import codechef from "../../public/codechef.png";
+import blackleet from "../../public/blackleet.png";
+import g4g from "../../public/g4g.logo.jpg";
 
 function Experience() {
   const cardItem = [
@@ -16,18 +18,18 @@ function Experience() {
       name: "Codechef",
       url: "https://www.codechef.com/users/explicitcode", // Replace with your actual Codechef profile URL
     },
-    // {
-    //   id: 3,
-    //   logo: work,
-    //   name: "Leetcode",
-    //   url: "https://leetcode.com/yourusername", // Replace with your actual Leetcode profile URL
-    // },
-    // {
-    //   id: 4,
-    //   logo: work,
-    //   name: "Work",
-    //   url: "https://www.yourworkprofile.com", // Replace with your actual Work profile URL
-    // },
+    {
+      id: 3,
+      logo: blackleet,
+      name: "Leetcode",
+      url: "https://leetcode.com/u/JBLC/", // Replace with your actual Leetcode profile URL
+    },
+    {
+      id: 4,
+      logo: g4g,
+      name: "GeeksforGeeks",
+      url: "https://www.geeksforgeeks.org/user/satyamgainvot/", // Replace with your actual Work profile URL
+    },
   ];
 
   return (
