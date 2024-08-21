@@ -96,7 +96,7 @@ function Projects() {
       name: "Student Resorce Hub",
       description: "MERN Stack Project",
       reviewLink:
-        "https://www.linkedin.com/posts/satyam-gaikwad-27a7a724b_innovation-effortease-techforstudents-activity-7230963266670256128-Vy7N?utm_source=share&utm_medium=member_android",
+        "https://effortease.netlify.app/",
       sourceLink: "https://github.com/SatAlgo/effortEase",
     },
     {

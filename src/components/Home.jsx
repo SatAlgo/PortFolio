@@ -17,17 +17,22 @@ function Home() {
         <div className="flex flex-col md:flex-row">
           <div className="md:w-1/2 mt-12 md:mt-24 space-y-2 order-2 md:order-1">
             <span className="text-pink-700 text-xl">Welcome In My Feed</span>
-            <div className="flex space-x-1 text-2xl md:text-4xl">
+            <div className="text-2xl md:text-4xl">
               <h1>Hello, I am a</h1>
-              {/* <span className="text-red-700 font-bold">Devloper</span> */}
-              <ReactTyped
-                className="text-red-700 font-bold"
-                strings={["Web Devloper.", "Competitive programmer.", "Problem Solver."]}
-                typeSpeed={40}
-                backSpeed={50}
-                loop={true}
-              />
+                <div className="text-red-700 font-bold">
+                  <ReactTyped
+                    strings={[
+                      "Web Developer.",
+                      "Competitive programmer.",
+                      "Problem Solver.",
+                    ]}
+                    typeSpeed={20}
+                    backSpeed={25}
+                    loop={true}
+                  />
+                </div>
             </div>
+
             <br />
             <p className="text-sm md:text-md text-justify">
               I’m Satyam Gaikwad, currently pursuing my B-Tech in Computer
@@ -40,7 +45,9 @@ function Home() {
             {/* ---------------------Social Media Icons---------------    */}
             <div className="flex flex-col items-center md:flex-row justify-between space-y-6 md:space-y-0">
               <div className="space-y-2">
-                <h1 className="text-blue-800 font-bold text-center">Awailable on</h1>
+                <h1 className="text-blue-800 font-bold text-center">
+                  Awailable on
+                </h1>
                 <ul className="flex space-x-5">
                   {/* <li>
                     <a href=""></a>
@@ -62,8 +69,11 @@ function Home() {
                   </li>
 
                   <li>
-                    <a href="https://codeforces.com/profile/SatAlgo" target="_blank">
-                    <SiCodeforces className="text-2xl cursor-pointer" />
+                    <a
+                      href="https://codeforces.com/profile/SatAlgo"
+                      target="_blank"
+                    >
+                      <SiCodeforces className="text-2xl cursor-pointer" />
                     </a>
                   </li>
                   {/* <li>
@@ -99,3 +109,22 @@ function Home() {
 }
 
 export default Home;
+
+// {
+//   /* <div className="flex space-x-1 text-2xl md:text-4xl">
+//               <h1>Hello, I am a</h1>
+//               {/* <span className="text-red-700 font-bold">Devloper</span> */
+// }
+// //   <ReactTyped
+// //     className="text-red-700 font-bold"
+// //     strings={["Web Devloper.", "Competitive programmer.", "Problem Solver."]}
+// //     typeSpeed={40}
+// //     backSpeed={50}
+// //     loop={true}
+// //   />
+// // </div> */}
+
+
+// git add .
+// git commit -m "message"
+// git push

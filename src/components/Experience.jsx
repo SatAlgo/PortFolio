@@ -57,6 +57,52 @@ function Experience() {
           ))}
         </div>
       </div>
+
+      <div className="pt-8">
+        <h1 className="text-3xl font-bold mb-5">Tech Stack</h1>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          <div>
+            <h2 className="mb-2 text-xl text-violet-600">Languages</h2>
+            <ul className="list-disc list-inside">
+              <li>C++</li>
+              <li>Python</li>
+              <li>Java</li>
+              <li>Scala</li>
+            </ul>
+          </div>
+    
+          <div>
+            <h2 className="mb-2 text-xl text-violet-600">Frontend</h2>
+            <ul className="list-disc list-inside">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>ReactJS</li>
+            </ul>
+          </div>
+          <div>
+            <h2 className="mb-2 text-xl text-violet-600">Backend</h2>
+            <ul className="list-disc list-inside">
+              <li>Node.js</li>
+              <li>Express.js</li>
+            </ul>
+          </div>
+          <div>
+            <h2 className="mb-2 text-xl text-violet-600">Database</h2>
+            <ul className="list-disc list-inside">
+              <li>MongoDB</li>
+            </ul>
+          </div>
+          <div>
+            <h2 className="mb-2 text-xl text-violet-600">Tools</h2>
+            <ul className="list-disc list-inside">
+              <li>Linux</li>
+              <li>Git</li>
+              <li>Postman</li>
+            </ul>
+          </div>
+        </div>
+      </div>
       <hr className="border-gray-300 my-8" />
     </div>
   );
