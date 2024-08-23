@@ -1,4 +1,5 @@
 import React from "react";
+import codolio_gif from "../../public/codolio_gif.gif";
 import codeforces from "../../public/codeforces.png";
 import codechef from "../../public/codechef.png";
 import blackleet from "../../public/blackleet.png";
@@ -8,24 +9,30 @@ function Experience() {
   const cardItem = [
     {
       id: 1,
+      logo: codolio_gif,
+      name: "Codolio",
+      url: "https://codolio.com/profile/Special%20Force", // Replace with your actual Codeforces profile URL
+    },
+    {
+      id: 2,
       logo: codeforces,
       name: "Codeforces",
       url: "https://codeforces.com/profile/SatAlgo", // Replace with your actual Codeforces profile URL
     },
     {
-      id: 2,
+      id: 3,
       logo: codechef,
       name: "Codechef",
       url: "https://www.codechef.com/users/explicitcode", // Replace with your actual Codechef profile URL
     },
     {
-      id: 3,
+      id: 4,
       logo: blackleet,
       name: "Leetcode",
-      url: "https://leetcode.com/u/JBLC/", // Replace with your actual Leetcode profile URL
+      url: "https://leetcode.com/u/samAlgo/", // Replace with your actual Leetcode profile URL
     },
     {
-      id: 4,
+      id: 5,
       logo: g4g,
       name: "GeeksforGeeks",
       url: "https://www.geeksforgeeks.org/user/satyamgainvot/", // Replace with your actual Work profile URL
@@ -67,7 +74,6 @@ function Experience() {
               <li>C++</li>
               <li>Python</li>
               <li>Java</li>
-              <li>Scala</li>
             </ul>
           </div>
     
@@ -99,6 +105,8 @@ function Experience() {
               <li>Linux</li>
               <li>Git</li>
               <li>Postman</li>
+              <li>Tablaue</li>
+              <li>Matlab</li>
             </ul>
           </div>
         </div>
