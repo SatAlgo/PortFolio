@@ -1,9 +1,10 @@
 import React from "react";
-import pic from "../../public/profile.jpeg";
+import pic from "../../public/coder.gif";
 //import { FaFacebook } from "react-icons/fa";
 import { IoLogoLinkedin } from "react-icons/io5";
 import { FaGithub } from "react-icons/fa";
-import { SiCodeforces } from "react-icons/si";
+//import { SiCodeforces } from "react-icons/si";
+import { SiDiscord } from "react-icons/si";
 //import { FaTelegram } from "react-icons/fa";
 import { ReactTyped, Typed } from "react-typed";
 
@@ -68,12 +69,20 @@ function Home() {
                     </a>
                   </li>
 
-                  <li>
+                  {/* <li>
                     <a
                       href="https://codeforces.com/profile/SatAlgo"
                       target="_blank"
                     >
                       <SiCodeforces className="text-2xl cursor-pointer" />
+                    </a>
+                  </li> */}
+                  <li>
+                    <a
+                      href="https://discord.com/invite/epSdN86X"
+                      target="_blank"
+                    >
+                      <SiDiscord className="text-2xl cursor-pointer" />
                     </a>
                   </li>
                   {/* <li>

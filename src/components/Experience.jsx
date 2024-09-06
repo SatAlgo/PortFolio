@@ -67,7 +67,7 @@ function Experience() {
 
       <div className="pt-8">
         <h1 className="text-3xl font-bold mb-5">Tech Stack</h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
           <div>
             <h2 className="mb-2 text-xl text-violet-600">Languages</h2>
             <ul className="list-disc list-inside">
