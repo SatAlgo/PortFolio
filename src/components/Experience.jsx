@@ -66,10 +66,10 @@ function Experience() {
       </div>
 
       <div className="pt-8">
-        <h1 className="text-3xl font-bold mb-5">Tech Stack</h1>
+        <h1 className="text-2xl text-violet-800  mb-5">Tech Stack</h1>
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-          <div>
-            <h2 className="mb-2 text-xl text-violet-600">Languages</h2>
+          <div className="px-4">
+            <h2 className="mb-2 text-xl text-teal-800">Languages</h2>
             <ul className="list-disc list-inside">
               <li>C++</li>
               <li>Python</li>
@@ -77,8 +77,8 @@ function Experience() {
             </ul>
           </div>
     
-          <div>
-            <h2 className="mb-2 text-xl text-violet-600">Frontend</h2>
+          <div className="px-4">
+            <h2 className="mb-2 text-xl text-teal-800">Frontend</h2>
             <ul className="list-disc list-inside">
               <li>HTML</li>
               <li>CSS</li>
@@ -86,21 +86,21 @@ function Experience() {
               <li>ReactJS</li>
             </ul>
           </div>
-          <div>
-            <h2 className="mb-2 text-xl text-violet-600">Backend</h2>
+          <div className="px-4">
+            <h2 className="mb-2 text-xl text-teal-800">Backend</h2>
             <ul className="list-disc list-inside">
               <li>Node.js</li>
               <li>Express.js</li>
             </ul>
           </div>
-          <div>
-            <h2 className="mb-2 text-xl text-violet-600">Database</h2>
+          <div className="px-4">
+            <h2 className="mb-2 text-xl text-teal-800">Database</h2>
             <ul className="list-disc list-inside">
               <li>MongoDB</li>
             </ul>
           </div>
-          <div>
-            <h2 className="mb-2 text-xl text-violet-600">Tools</h2>
+          <div className="px-4">
+            <h2 className="mb-2 text-xl text-teal-800">Tools</h2>
             <ul className="list-disc list-inside">
               <li>Linux</li>
               <li>Git</li>
