@@ -55,7 +55,7 @@ function Footer() {
               </a>
             </div>
             <div className="mt-8 border-t border-gray-700 pt-8 flex flex-col items-center">
-              <p className="text-sm">&copy; 2024 Satyam Gaikwad</p>
+              <p className="text-sm">&copy; {new Date().getFullYear()} Satyam Algorithms</p>
               <p className="text-sm">All rights reserved.</p>
             </div>
           </div>
