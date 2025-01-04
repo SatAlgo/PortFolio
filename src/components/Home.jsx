@@ -159,7 +159,7 @@ function Home() {
       >
         <div className="flex flex-col md:flex-row">
           <div className="md:w-1/2 mt-12 md:mt-24 space-y-2 order-2 md:order-1">
-            <span className="text-pink-700 text-xl">Welcome In My Feed</span>
+            <span className="text-pink-700 text-xl">Welcome Into My Feed</span>
             <div className="text-2xl md:text-4xl">
               <h1>Hello, I am a</h1>
                 <div className="text-red-700 font-bold">
