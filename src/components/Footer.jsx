@@ -21,6 +21,7 @@ function Footer() {
               {/* <a href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer" className="text-blue-500">
                 <FaTelegram size={24} />
               </a> */}
+              
               <a
                 href="mailto:satyamgaikwad.mitaoe@gmail.com"
                 className="text-red-500"

@@ -80,7 +80,7 @@
 // export default Projects;
 
 import React, { useState } from "react";
-import effortease from "../../public/effortease.png";
+import kitup from "../../public/kitup.png";
 import AutoSnakeGame from "../../public/AutoSnakeGame.png";
 import SnakeGame from "../../public/SnakeGame.png";
 import tictactoe from "../../public/tictactoe.jpeg";
@@ -92,12 +92,12 @@ function Projects() {
   const cardItem = [
     {
       id: 1,
-      logo: effortease,
+      logo: kitup,
       name: "Student Resorce Hub",
       description: "MERN Stack Project",
       reviewLink:
-        "https://effortease.netlify.app/",
-      sourceLink: "https://github.com/SatAlgo/effortEase",
+        "https://kitup.netlify.app/",
+      sourceLink: "https://github.com/SatAlgo/SetUp",
     },
     {
       id: 2,
