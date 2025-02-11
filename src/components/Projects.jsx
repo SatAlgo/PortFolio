@@ -180,18 +180,26 @@ function Projects() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold px-4 py-2 rounded">
+                    {/* <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold px-4 py-2 rounded">
+                      Explore
+                    </button> */}
+                    <button className="bg-blue-500 hover:bg-blue-700 text-gray-800 font-bold px-3 py-1 rounded border-2 border-blue-700">
                       Explore
                     </button>
+
                   </a>
                   <a
                     href={sourceLink}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <button className="bg-green-500 hover:bg-green-700 text-white font-bold px-4 py-2 rounded">
-                      SourceCode
+                    {/* <button className="bg-green-500 hover:bg-green-700 text-white font-bold px-4 py-2 rounded">
+                      Code
+                    </button> */}
+                    <button className="bg-green-500 hover:bg-green-700 text-gray-800 font-bold px-3 py-1 rounded border-2 border-green-700">
+                      Code
                     </button>
+
                   </a>
                 </div>
               </div>

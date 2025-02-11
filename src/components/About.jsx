@@ -47,13 +47,13 @@ function About() {
 
       {showEducation && (
         <div>
-          <h1 className="text-yellow-600 font-semibold text-2xl pt-6 pb-1">
+          <h1 className="text-pink-600 font-semibold text-2xl pt-6 pb-1">
             Education
           </h1>
           <h1 className="font-semibold text-xl pt-2 italic text-gray-400">
             BTech in Computer Engineering
           </h1>
-          <h1 className="text-yellow-500 font-semibold text-xl">
+          <h1 className="text-rose-500 font-semibold text-xl">
             MIT Academy of Engineering, Alandi, Pune
           </h1>
           <span>
@@ -66,7 +66,7 @@ function About() {
           <h1 className="font-semibold text-xl pt-2 italic text-gray-400">
             HSC College
           </h1>
-          <h1 className="text-yellow-500 font-semibold text-xl">
+          <h1 className="text-rose-500 font-semibold text-xl">
             Dayanand Science Junior College, Latur
           </h1>
           <span>
@@ -81,7 +81,7 @@ function About() {
           <h1 className="font-semibold text-xl pt-2 italic text-gray-400">
             SSC School
           </h1>
-          <h1 className="text-yellow-500 font-semibold text-xl">
+          <h1 className="text-rose-500 font-semibold text-xl">
             Shri Sant Goroba Kaka Vidyalaya, Saundana
           </h1>
           <span>
