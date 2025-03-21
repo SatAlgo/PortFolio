@@ -90,13 +90,16 @@ function Experience() {
             <h2 className="mb-2 text-xl text-teal-800">Backend</h2>
             <ul className="list-disc list-inside">
               <li>Node.js</li>
+              <li>JavaScript</li>
               <li>Express.js</li>
+              <li>PHP</li>
             </ul>
           </div>
           <div className="px-4">
             <h2 className="mb-2 text-xl text-teal-800">Database</h2>
             <ul className="list-disc list-inside">
               <li>MongoDB</li>
+              <li>MySQL</li>
             </ul>
           </div>
           <div className="px-4">
@@ -105,7 +108,7 @@ function Experience() {
               <li>Linux</li>
               <li>Git</li>
               <li>Postman</li>
-              <li>Tablaue</li>
+              <li>Tableau</li>
               <li>Matlab</li>
               
             </ul>

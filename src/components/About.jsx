@@ -23,12 +23,12 @@ function About() {
         and applying new concepts.
         <br />
         <br />
-        As a full-stack web developer, I have hands-on experience with HTML, 
-        CSS, JavaScript, and various frameworks. I am proficient in using 
-        the MERN stack (MongoDB, Express.js, React.js, Node.js) to create 
-        dynamic and user-friendly websites. My programming proficiency extends to
-        languages such as C, C++, Python, and Java, enabling me to tackle
-        complex problems and devise effective solutions.
+        As a full-stack web developer, I have hands-on experience with HTML, CSS, 
+        JavaScript, and various frameworks. I am proficient in using the MERN stack 
+        (MongoDB, Express.js, React.js, Node.js) and MySQL for full-stack development 
+        to create dynamic and user-friendly websites. My programming proficiency extends 
+        to languages such as C, C++, Python, and Java, enabling me to tackle complex 
+        problems and devise effective solutions.
         <br />
         <br />I am enthusiastic about leveraging my academic knowledge and
         practical skills to contribute to innovative projects and make a

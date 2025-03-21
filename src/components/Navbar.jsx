@@ -140,7 +140,7 @@ function Navbar() {
               <img src={pic} className="h-12 w-11 rounded-full" alt="Profile" />
             </a>
             <h1 className="font-semibold text-xl">
-              <span className="text-teal-500 text-2xl">S</span>atyam
+            <span className="bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent text-2xl font-bold">S</span>atyam
               <p className="text-sm">Computer Engineer</p>
             </h1>
           </div>
@@ -169,7 +169,7 @@ function Navbar() {
                   </Link>
 
                   {/* Hover Effect (Follows Cursor, Falls Back to Active Section) */}
-                  <span
+                  {/* <span
                     className={`absolute inset-0 -z-10 rounded-md transition-all duration-300 
                     ${
                       hoveredSection === text
@@ -178,7 +178,20 @@ function Navbar() {
                         ? "bg-gray-300" // Show active section when not hovering
                         : ""
                     }`}
-                  />
+                  /> */}
+
+                  <span
+                    className={`absolute inset-0 -z-10 rounded-md transition-all duration-300 
+                    ${
+                      hoveredSection === text
+                        ? "bg-blue-200 text-gray-800" // Stylish hover effect
+                        : activeSection === text
+                        ? "bg-gradient-to-r from-teal-400 to-blue-500 text-white" // Active section highlight
+                        : ""
+                    }`}
+                  ></span>
+
+
                 </li>
               ))}
             </ul>
