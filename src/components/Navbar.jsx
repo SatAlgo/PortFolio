@@ -203,7 +203,7 @@ function Navbar() {
 
         {/* ------------------Mobile Navbar------------------- */}
         {menu && (
-          <div className="bg-white">
+          <div className="bg-transparent backdrop-blur-lg absolute top-16 left-0 w-full">
             <ul className="md:hidden flex flex-col h-screen items-center justify-center space-y-3 text-xl">
               {navItems.map(({ id, text }) => (
                 <li
@@ -233,9 +233,9 @@ function Navbar() {
                     className={`absolute inset-0 -z-10 rounded-md transition-all duration-300 
                     ${
                       hoveredSection === text
-                        ? "bg-gray-400"
+                        ? "bg-blue-200 text-gray-800" // Stylish hover effect
                         : activeSection === text
-                        ? "bg-gray-300"
+                        ? "bg-gradient-to-r from-teal-400 to-blue-500 text-white" // Active section highlight
                         : ""
                     }`}
                   />
