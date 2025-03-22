@@ -233,8 +233,6 @@ function Navbar() {
                     className={`absolute inset-0 -z-10 rounded-md transition-all duration-300 
                     ${
                       hoveredSection === text
-                        ? "bg-blue-200 text-gray-800" // Stylish hover effect
-                        : activeSection === text
                         ? "bg-gradient-to-r from-teal-400 to-blue-500 text-white" // Active section highlight
                         : ""
                     }`}
