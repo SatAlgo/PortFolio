@@ -36,11 +36,7 @@ function Home() {
 
             <br />
             <p className="text-sm md:text-md text-justify">
-              I’m Satyam Madhav Gaikwad, currently pursuing my B-Tech in Computer
-              Engineering. As a second-year student, I’m passionate about web
-              development, data structures. With a strong foundation in C++, C,
-              Python, and Java, I’m eager to tackle real-world challenges and
-              contribute to innovative projects.
+              I’m Satyam Madhav Gaikwad, pursuing a B.Tech in Computer Engineering with a strong passion for web development and data structures. I enjoy exploring innovative ideas and finding creative solutions to real-world challenges, aiming to build impactful and meaningful technology.
             </p>
             <br />
             {/* ---------------------Social Media Icons---------------    */}

@@ -16,25 +16,13 @@ function About() {
     >
       <h1 className="text-3xl font-bold mb-5">About</h1>
       <p>
-        I am a second-year computer engineering student who is deeply passionate
-        about developing websites, solving coding challenges, and continuously
-        expanding my skill set. My journey in computer engineering has been
-        driven by a strong interest in technology and a commitment to learning
-        and applying new concepts.
+        I am a third-year Computer Engineering student with a strong passion for full-stack web development, problem-solving, and continuous skill enhancement. My journey in engineering has been shaped by a deep curiosity for technology and a dedication to turning ideas into impactful solutions.
         <br />
         <br />
-        As a full-stack web developer, I have hands-on experience with HTML, CSS, 
-        JavaScript, and various frameworks. I am proficient in using the MERN stack 
-        (MongoDB, Express.js, React.js, Node.js) and MySQL for full-stack development 
-        to create dynamic and user-friendly websites. My programming proficiency extends 
-        to languages such as C, C++, Python, and Java, enabling me to tackle complex 
-        problems and devise effective solutions.
+        With hands-on experience in full-stack development, I specialize in the MERN stack (MongoDB, Express.js, React.js, Node.js) and have worked extensively with HTML, CSS, JavaScript, and MySQL to build scalable and user-centric web applications. I am also proficient in core programming languages including C, C++, Python, and Java, which I leverage for algorithmic problem-solving and software development.
         <br />
-        <br />I am enthusiastic about leveraging my academic knowledge and
-        practical skills to contribute to innovative projects and make a
-        meaningful impact in the tech industry. My goal is to stay at the
-        forefront of technology, continually learn, and apply my expertise to
-        real-world challenges.
+        <br />
+        As I progress through my academic and professional journey, I remain committed to staying updated with the latest industry trends and technologies. I aim to contribute meaningfully to real-world projects, collaborate with like-minded professionals, and drive innovation in the tech ecosystem.
       </p>
       <br />
 
