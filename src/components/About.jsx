@@ -1,12 +1,106 @@
+// import React, { useState } from "react";
+// import "@fontsource/inter"; 
+
+// function About() {
+//   const [showEducation, setShowEducation] = useState(false);
+
+//   const toggleEducation = () => {
+//     setShowEducation(!showEducation);
+//   };
+
+//   return (
+//     <div
+//       name="About"
+//       className="max-w-screen-2xl container mx-auto px-4 md:px-20 my-16"
+//     >
+//       <h1 className="text-4xl font-bold mb-6 text-gray-800">About</h1>
+//       <p className="text-lg leading-8 text-gray-700">
+//         I am a third-year Computer Engineering student with a strong passion for full-stack web development, problem-solving, and continuous skill enhancement. My journey in engineering has been shaped by a deep curiosity for technology and a dedication to turning ideas into impactful solutions.
+//         <br /><br />
+//         With hands-on experience in full-stack development, I specialize in the MERN stack (MongoDB, Express.js, React.js, Node.js) and have worked extensively with HTML, CSS, JavaScript, and MySQL to build scalable and user-centric web applications. I am also proficient in core programming languages including C, C++, Python, and Java, which I leverage for algorithmic problem-solving and software development.
+//         <br /><br />
+//         As I progress through my academic and professional journey, I remain committed to staying updated with the latest industry trends and technologies. I aim to contribute meaningfully to real-world projects, collaborate with like-minded professionals, and drive innovation in the tech ecosystem.
+//       </p>
+
+//       <div className="mt-8">
+//         <button
+//           onClick={toggleEducation}
+//           className="bg-gradient-to-r from-yellow-400 to-pink-500 hover:from-pink-500 hover:to-yellow-400 text-white font-semibold text-lg px-6 py-2 rounded-full shadow-lg transition duration-300"
+//         >
+//           {showEducation ? "Hide Education" : "View Education"}
+//         </button>
+//       </div>
+
+//       {showEducation && (
+//         <div className="mt-10 bg-white rounded-xl p-8 shadow-xl border border-gray-100 font-sans">
+//           <h2 className="text-3xl font-bold text-pink-600 mb-6">Education</h2>
+
+//           <div className="mb-6">
+//             <h3 className="text-xl font-semibold text-gray-600 italic">
+//               BTech in Computer Engineering
+//             </h3>
+//             <p className="text-xl text-rose-500 font-bold">
+//               MIT Academy of Engineering, Alandi, Pune
+//             </p>
+//             <p className="text-gray-700 mt-1">
+//               Degree Pursuing: BTech in Computer Engineering
+//               <br />
+//               Expected Graduation Year: <span className="font-semibold">2027</span>
+//             </p>
+//           </div>
+
+//           <div className="mb-6">
+//             <h3 className="text-xl font-semibold text-gray-600 italic">
+//               HSC College
+//             </h3>
+//             <p className="text-xl text-rose-500 font-bold">
+//               Dayanand Science Junior College, Latur
+//             </p>
+//             <p className="text-gray-700 mt-1">
+//               HSC (Percentage: <span className="font-semibold">68.00%</span>)
+//               <br />
+//               Passing Year: <span className="font-semibold">2022</span>
+//               <br />
+//               MHT-CET (Percentile: <span className="font-semibold">93.40</span>)
+//             </p>
+//           </div>
+
+//           <div>
+//             <h3 className="text-xl font-semibold text-gray-600 italic">
+//               SSC School
+//             </h3>
+//             <p className="text-xl text-rose-500 font-bold">
+//               Shri Sant Goroba Kaka Vidyalaya, Saundana
+//             </p>
+//             <p className="text-gray-700 mt-1">
+//               SSC (Percentage: <span className="font-semibold">93.40%</span>)
+//               <br />
+//               Passing Year: <span className="font-semibold">2020</span>
+//             </p>
+//           </div>
+//         </div>
+//       )}
+
+//       <hr className="border-gray-300 my-12" />
+//     </div>
+//   );
+// }
+
+// export default About;
+
+
 import React, { useState } from "react";
+import "@fontsource/inter";
 
 function About() {
-  // State to manage the visibility of the education section
-  const [showEducation, setShowEducation] = useState(false);
+  const [activeSection, setActiveSection] = useState(""); // "education" | "resume" | ""
 
-  // Function to toggle the visibility of the education section
   const toggleEducation = () => {
-    setShowEducation(!showEducation);
+    setActiveSection((prev) => (prev === "education" ? "" : "education"));
+  };
+
+  const toggleResume = () => {
+    setActiveSection((prev) => (prev === "resume" ? "" : "resume"));
   };
 
   return (
@@ -15,73 +109,95 @@ function About() {
       className="max-w-screen-2xl container mx-auto px-4 md:px-20 my-16"
     >
       <h1 className="text-3xl font-bold mb-5">About</h1>
-      <p>
+      <p className="text-md leading-7 text-gray-700">
         I am a third-year Computer Engineering student with a strong passion for full-stack web development, problem-solving, and continuous skill enhancement. My journey in engineering has been shaped by a deep curiosity for technology and a dedication to turning ideas into impactful solutions.
-        <br />
-        <br />
+        <br /><br />
         With hands-on experience in full-stack development, I specialize in the MERN stack (MongoDB, Express.js, React.js, Node.js) and have worked extensively with HTML, CSS, JavaScript, and MySQL to build scalable and user-centric web applications. I am also proficient in core programming languages including C, C++, Python, and Java, which I leverage for algorithmic problem-solving and software development.
-        <br />
-        <br />
+        <br /><br />
         As I progress through my academic and professional journey, I remain committed to staying updated with the latest industry trends and technologies. I aim to contribute meaningfully to real-world projects, collaborate with like-minded professionals, and drive innovation in the tech ecosystem.
       </p>
-      <br />
 
-      <button
-        onClick={toggleEducation}
-        className="text-gray-500 font-semibold text-xl py-1 px-2 border border-yellow-600 rounded"
-      >
-        {showEducation ? "Hide Education" : "Education"}
-      </button>
+      <div className="mt-8 flex flex-wrap gap-4 font-sans">
+        <button
+          onClick={toggleEducation}
+          className="bg-gradient-to-r from-blue-500 to-violet-600 hover:from-violet-600 hover:to-blue-500 text-white font-semibold text-lg px-6 py-2 rounded-full shadow-md transition duration-300"
+        >
+          {activeSection === "education" ? "Hide Education" : "View Education"}
+        </button>
 
-      {showEducation && (
-        <div>
-          <h1 className="text-pink-600 font-semibold text-2xl pt-6 pb-1">
-            Education
-          </h1>
-          <h1 className="font-semibold text-xl pt-2 italic text-gray-400">
-            BTech in Computer Engineering
-          </h1>
-          <h1 className="text-rose-500 font-semibold text-xl">
-            MIT Academy of Engineering, Alandi, Pune
-          </h1>
-          <span>
-            Degree Pursuing: BTech in Computer Engineering
-            <br />
-            Expected Graduation Year: [2027]
-          </span>
-          <br />
-          <br />
-          <h1 className="font-semibold text-xl pt-2 italic text-gray-400">
-            HSC College
-          </h1>
-          <h1 className="text-rose-500 font-semibold text-xl">
-            Dayanand Science Junior College, Latur
-          </h1>
-          <span>
-            HSC (Percentage: 68.00)
-            <br />
-            Passing Year: [2022]
-            <br />
-            MHT-CET (Percentile: 93.40)
-          </span>
-          <br />
-          <br />
-          <h1 className="font-semibold text-xl pt-2 italic text-gray-400">
-            SSC School
-          </h1>
-          <h1 className="text-rose-500 font-semibold text-xl">
-            Shri Sant Goroba Kaka Vidyalaya, Saundana
-          </h1>
-          <span>
-            SSC (Percentage: 93.40)
-            <br />
-            Passing Year: [2020]
-          </span>
-          <br />
-          <br />
+        <button
+          onClick={toggleResume}
+          className="bg-gradient-to-r from-green-600 to-teal-500 hover:from-teal-500 hover:to-green-600 text-white font-semibold text-lg px-6 py-2 rounded-full shadow-md transition duration-300"
+        >
+          {activeSection === "resume" ? "Hide Resume" : "View Resume"}
+        </button>
+      </div>
+
+      {activeSection === "education" && (
+        <div className="mt-10 bg-white rounded-xl p-8 shadow-xl border border-gray-100 font-sans">
+          <h2 className="text-3xl font-bold text-pink-600 mb-6">Education</h2>
+
+          <div className="mb-6">
+            <h3 className="text-xl font-semibold text-gray-600 italic">
+              BTech in Computer Engineering
+            </h3>
+            <p className="text-xl text-rose-500 font-bold">
+              MIT Academy of Engineering, Alandi, Pune
+            </p>
+            <p className="text-gray-700 mt-1">
+              Degree Pursuing: BTech in Computer Engineering
+              <br />
+              Expected Graduation Year: <span className="font-semibold">2027</span>
+            </p>
+          </div>
+
+          <div className="mb-6">
+            <h3 className="text-xl font-semibold text-gray-600 italic">
+              HSC College
+            </h3>
+            <p className="text-xl text-rose-500 font-bold">
+              Dayanand Science Junior College, Latur
+            </p>
+            <p className="text-gray-700 mt-1">
+              HSC (Percentage: <span className="font-semibold">68.00%</span>)
+              <br />
+              Passing Year: <span className="font-semibold">2022</span>
+              <br />
+              MHT-CET (Percentile: <span className="font-semibold">93.40</span>)
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-xl font-semibold text-gray-600 italic">
+              SSC School
+            </h3>
+            <p className="text-xl text-rose-500 font-bold">
+              Shri Sant Goroba Kaka Vidyalaya, Saundana
+            </p>
+            <p className="text-gray-700 mt-1">
+              SSC (Percentage: <span className="font-semibold">93.40%</span>)
+              <br />
+              Passing Year: <span className="font-semibold">2020</span>
+            </p>
+          </div>
         </div>
       )}
-      <hr className="border-gray-300 my-8" />
+
+      {activeSection === "resume" && (
+        <div className="mt-10">
+          {/* <h2 className="text-3xl font-bold text-green-700 mb-4">Resume</h2> */}
+          <div className="w-full h-[600px] border rounded-xl shadow-md overflow-hidden">
+            <iframe
+              src="/resume.pdf"
+              title="My Resume"
+              className="w-full h-full"
+              frameBorder="0"
+            ></iframe>
+          </div>
+        </div>
+      )}
+
+      <hr className="border-gray-300 my-12" />
     </div>
   );
 }
