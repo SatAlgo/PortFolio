@@ -117,7 +117,7 @@ function About() {
         As I progress through my academic and professional journey, I remain committed to staying updated with the latest industry trends and technologies. I aim to contribute meaningfully to real-world projects, collaborate with like-minded professionals, and drive innovation in the tech ecosystem.
       </p>
 
-      <div className="mt-8 flex flex-wrap gap-4 font-sans">
+      {/* <div className="mt-8 flex flex-wrap gap-4 font-sans">
         <button
           onClick={toggleEducation}
           className="bg-gradient-to-r from-blue-500 to-violet-600 hover:from-violet-600 hover:to-blue-500 text-white font-semibold text-lg px-6 py-2 rounded-full shadow-md transition duration-300"
@@ -131,7 +131,24 @@ function About() {
         >
           {activeSection === "resume" ? "Hide Resume" : "View Resume"}
         </button>
+      </div> */}
+
+      <div className="mt-8 flex flex-col sm:flex-row gap-4 font-sans">
+        <button
+          onClick={toggleEducation}
+          className="w-full sm:w-auto sm:min-w-[160px] text-center bg-gradient-to-r from-blue-500 to-violet-600 hover:from-violet-600 hover:to-blue-500 text-white font-semibold text-lg px-6 py-2 rounded-full shadow-md transition duration-300"
+        >
+          {activeSection === "education" ? "Hide Education" : "View Education"}
+        </button>
+
+        <button
+          onClick={toggleResume}
+          className="w-full sm:w-auto sm:min-w-[160px] text-center bg-gradient-to-r from-green-600 to-teal-500 hover:from-teal-500 hover:to-green-600 text-white font-semibold text-lg px-6 py-2 rounded-full shadow-md transition duration-300"
+        >
+          {activeSection === "resume" ? "Hide Resume" : "View Resume"}
+        </button>
       </div>
+
 
       {activeSection === "education" && (
         <div className="mt-10 bg-white rounded-xl p-8 shadow-xl border border-gray-100 font-sans">
