@@ -30,8 +30,8 @@ function Certificates() {
 
   return (
     <div className="max-w-screen-2xl container mx-auto px-4 md:px-20 mt-10">
-      <h1 className="text-3xl font-bold mb-5">Certificates</h1>
-
+      <h1 className="text-3xl text-sky-600 font-mono tracking-wider mb-6">Certificates</h1>
+    
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-6">
         {certList.map((cert) => (
           <div

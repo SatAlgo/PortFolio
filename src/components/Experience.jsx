@@ -212,7 +212,7 @@ function Experience() {
       </div>
 
       {/* Tech Stack Section */}
-      <div className="pt-8">
+      {/* <div className="pt-8">
         <h1 className="text-2xl text-violet-800 mb-5">Tech Stack</h1>
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
           <div className="px-4">
@@ -259,7 +259,67 @@ function Experience() {
             </ul>
           </div>
         </div>
+      </div> */}
+
+      <div className="pt-12">
+        <h1 className="text-3xl text-violet-600 font-mono tracking-wider mb-6">Tech Stack</h1>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+          {/* Languages */}
+          <div className="bg-zinc-50 shadow-lg rounded-xl p-5 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+            <h2 className="text-lg text-teal-700 mb-3">Languages</h2>
+            <ul className="list-disc list-inside text-gray-700 space-y-1 text-sm">
+              <li>C++</li>
+              <li>Python</li>
+              <li>Java</li>
+            </ul>
+          </div>
+
+          {/* Frontend */}
+          <div className="bg-zinc-50 shadow-lg rounded-xl p-5 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+            <h2 className="text-lg text-teal-700 mb-3">Frontend</h2>
+            <ul className="list-disc list-inside text-gray-700 space-y-1 text-sm">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>ReactJS</li>
+            </ul>
+          </div>
+
+          {/* Backend */}
+          <div className="bg-zinc-50 shadow-lg rounded-xl p-5 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+            <h2 className="text-lg text-teal-700 mb-3">Backend</h2>
+            <ul className="list-disc list-inside text-gray-700 space-y-1 text-sm">
+              <li>Node.js</li>
+              <li>JavaScript</li>
+              <li>Express.js</li>
+              <li>PHP</li>
+            </ul>
+          </div>
+
+          {/* Database */}
+          <div className="bg-zinc-50 shadow-lg rounded-xl p-5 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+            <h2 className="text-lg text-teal-700 mb-3">Database</h2>
+            <ul className="list-disc list-inside text-gray-700 space-y-1 text-sm">
+              <li>MongoDB</li>
+              <li>MySQL</li>
+            </ul>
+          </div>
+
+          {/* Tools */}
+          <div className="bg-zinc-50 shadow-lg rounded-xl p-5 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+            <h2 className="text-lg text-teal-700 mb-3">Tools</h2>
+            <ul className="list-disc list-inside text-gray-700 space-y-1 text-sm">
+              <li>Linux</li>
+              <li>Git</li>
+              <li>Postman</li>
+              <li>Tableau</li>
+              <li>Matlab</li>
+            </ul>
+          </div>
+        </div>
       </div>
+
 
       <hr className="border-gray-300 my-8" />
     </div>

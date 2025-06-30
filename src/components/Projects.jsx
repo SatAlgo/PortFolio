@@ -343,7 +343,7 @@ function Projects() {
 
           <div
             key={project.id}
-            className="group relative border-[2px] rounded-lg shadow-lg p-3 hover:scale-105 duration-300 cursor-pointer flex flex-col justify-between"
+            className="group relative bg-gray-100 border-[2px] rounded-lg shadow-lg p-3 hover:scale-105 duration-300 cursor-pointer flex flex-col justify-between"
             onClick={() => {
               if (window.innerWidth >= 768) openModal(project);
             }}
