@@ -176,7 +176,7 @@ function Experience() {
     >
       <div>
         <h1 className="text-3xl font-bold mb-5">Experience</h1>
-        <p className="text-xl text-blue-600">Coding profiles</p>
+        <h1 className="text-3xl text-blue-600 font-mono tracking-wider mb-5">Coding profiles</h1>
         <div className="grid grid-cols-2 md:grid-cols-5 gap-7 my-6">
           {cardItem.map(({ id, logo, name, url, info }) => (
             <div
