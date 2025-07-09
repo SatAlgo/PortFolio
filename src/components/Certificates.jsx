@@ -12,11 +12,11 @@ function Certificates() {
       image: "/certificates/IR4.0.jpg",
     },
     {
-      id: 2,
-      title: "AMCAT 2025 - Result",
-      platform: "Saville and Holdsworth Limited (SHL)",
-      date: "(2025)",
-      image: "/certificates/amcat_25.jpg",
+    id: 2,
+      title: "Technology Job Simulation - Coding Development",
+      platform: "Deloitte (via Forage)",
+      date: "July 7th, 2025",
+      image: "/certificates/Deloitte_TJS.png",
     },
     {
       id: 3,
