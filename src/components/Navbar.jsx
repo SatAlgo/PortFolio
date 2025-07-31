@@ -1,12 +1,11 @@
-// import React, { useState, useEffect } from "react";
+// import React, { useState } from "react";
 // import pic from "../../public/unnamed.png";
 // import { IoMenuSharp, IoClose } from "react-icons/io5";
 // import { Link } from "react-scroll";
 
 // function Navbar() {
 //   const [menu, setMenu] = useState(false);
-//   const [activeSection, setActiveSection] = useState("Home"); // Track section in view
-//   const [hoveredSection, setHoveredSection] = useState(null); // Track hovered item
+//   const [activeSection, setActiveSection] = useState("Home");
 
 //   const navItems = [
 //     { id: 1, text: "Home" },
@@ -20,10 +19,11 @@
 //     <>
 //       <div
 //         name="Navbar"
-//         className="max-w-screen-2xl container mx-auto px-4 md:px-12 h-16 shadow-md fixed top-0 left-0 right-0 z-50 bg-white"
+//         className="max-w-screen-2xl container mx-auto px-4 md:px-12 h-16 fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-white/70 border-b border-gray-200 shadow-sm"
 //       >
 //         <div className="flex justify-between items-center h-16">
-//           <div className="flex space-x-2">
+//           {/* Logo & Name */}
+//           <div className="flex space-x-2 items-center">
 //             <a
 //               href="https://codolio.com/profile/Special%20Force"
 //               target="_blank"
@@ -32,20 +32,18 @@
 //               <img src={pic} className="h-12 w-11 rounded-full" alt="Profile" />
 //             </a>
 //             <h1 className="font-semibold text-xl">
-//             <span className="bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent text-2xl font-bold">S</span>atyam
-//               <p className="text-sm">Computer Engineer</p>
+//               <span className="bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent text-2xl font-bold">S</span>atyam
+//               <p className="text-sm text-gray-600">Computer Engineer</p>
 //             </h1>
 //           </div>
 
-//           {/* ------------------Desktop Navbar------------------- */}
+//           {/* Desktop Navigation */}
 //           <div>
-//             <ul className="hidden md:flex space-x-4">
+//             <ul className="hidden md:flex space-x-6 text-[17px] font-medium">
 //               {navItems.map(({ id, text }) => (
 //                 <li
 //                   key={id}
-//                   className="relative cursor-pointer transition-all duration-300"
-//                   onMouseEnter={() => setHoveredSection(text)}
-//                   onMouseLeave={() => setHoveredSection(null)}
+//                   className="relative group transition-all duration-300 cursor-pointer"
 //                 >
 //                   <Link
 //                     to={text}
@@ -53,82 +51,70 @@
 //                     duration={500}
 //                     offset={-70}
 //                     spy={true}
-//                     activeClass="active"
 //                     onSetActive={() => setActiveSection(text)}
-//                     className="block px-2 py-1"
+//                     className={`block px-2 py-1 transition duration-300 ${
+//                       activeSection === text
+//                         ? "bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent"
+//                         : "text-gray-800"
+//                     }`}
 //                   >
 //                     {text}
 //                   </Link>
 
-//                   {/* Hover Effect (Follows Cursor, Falls Back to Active Section) */}
-//                   {/* <span
-//                     className={`absolute inset-0 -z-10 rounded-md transition-all duration-300 
-//                     ${
-//                       hoveredSection === text
-//                         ? "bg-gray-200" // Show hover effect on hovered item
-//                         : activeSection === text
-//                         ? "bg-gray-300" // Show active section when not hovering
-//                         : ""
-//                     }`}
-//                   /> */}
-
+//                   {/* Underline */}
 //                   <span
-//                     className={`absolute inset-0 -z-10 rounded-md transition-all duration-300 
-//                     ${
-//                       hoveredSection === text
-//                         ? "bg-blue-200 text-gray-800" // Stylish hover effect
-//                         : activeSection === text
-//                         ? "bg-gradient-to-r from-teal-400 to-blue-500 text-white" // Active section highlight
-//                         : ""
+//                     className={`absolute bottom-0 left-0 w-full h-0.5 rounded-full bg-gradient-to-r from-teal-400 to-blue-500 transform origin-left transition-transform duration-300 ${
+//                       activeSection === text
+//                         ? "scale-x-100"
+//                         : "scale-x-0 group-hover:scale-x-100"
 //                     }`}
 //                   ></span>
-
-
 //                 </li>
 //               ))}
 //             </ul>
-//             <div onClick={() => setMenu(!menu)} className="md:hidden">
-//               {menu ? <IoClose size={24} /> : <IoMenuSharp size={24} />}
+
+//             {/* Mobile Menu Toggle */}
+//             <div onClick={() => setMenu(!menu)} className="md:hidden cursor-pointer">
+//               {menu ? <IoClose size={26} /> : <IoMenuSharp size={26} />}
 //             </div>
 //           </div>
 //         </div>
 
-//         {/* ------------------Mobile Navbar------------------- */}
+//         {/* Mobile Navigation */}
 //         {menu && (
-//           <div className="bg-transparent backdrop-blur-lg absolute top-16 left-0 w-full">
-//             <ul className="md:hidden flex flex-col h-screen items-center justify-center space-y-3 text-xl">
+//           <div className="bg-white/80 backdrop-blur-lg absolute top-16 left-0 w-full shadow-md">
+//             <ul className="md:hidden flex flex-col h-screen items-center justify-center space-y-5 text-lg font-medium">
 //               {navItems.map(({ id, text }) => (
 //                 <li
 //                   key={id}
-//                   className="relative cursor-pointer transition-all duration-300"
-//                   onMouseEnter={() => setHoveredSection(text)}
-//                   onMouseLeave={() => setHoveredSection(null)}
+//                   className="relative group"
+//                   onClick={() => {
+//                     setMenu(false);
+//                     setActiveSection(text);
+//                   }}
 //                 >
 //                   <Link
-//                     onClick={() => {
-//                       setMenu(false);
-//                       setActiveSection(text);
-//                     }}
 //                     to={text}
 //                     smooth={true}
 //                     duration={500}
 //                     offset={-70}
 //                     spy={true}
-//                     activeClass="active"
-//                     className="block px-4 py-2"
+//                     className={`block px-4 py-2 transition duration-300 ${
+//                       activeSection === text
+//                         ? "bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent"
+//                         : "text-gray-800"
+//                     }`}
 //                   >
 //                     {text}
 //                   </Link>
 
-//                   {/* Hover Effect (Same Logic for Mobile) */}
 //                   <span
-//                     className={`absolute inset-0 -z-10 rounded-md transition-all duration-300 
-//                     ${
-//                       hoveredSection === text
-//                         ? "bg-gradient-to-r from-teal-400 to-blue-500 text-white" // Active section highlight
-//                         : ""
+//                     className={`absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-teal-400 to-blue-500 transform origin-left transition-transform duration-300 ${
+//                       activeSection === text
+//                         ? "scale-x-100"
+//                         : "scale-x-0 group-hover:scale-x-100"
 //                     }`}
-//                   />
+//                   ></span>
 //                 </li>
 //               ))}
 //             </ul>
@@ -142,14 +128,17 @@
 // export default Navbar;
 
 
-import React, { useState } from "react";
+
+
+import React, { useState, useEffect } from "react";
 import pic from "../../public/unnamed.png";
 import { IoMenuSharp, IoClose } from "react-icons/io5";
 import { Link } from "react-scroll";
 
 function Navbar() {
   const [menu, setMenu] = useState(false);
-  const [activeSection, setActiveSection] = useState("Home");
+  const [activeSection, setActiveSection] = useState("Home"); // Track section in view
+  const [hoveredSection, setHoveredSection] = useState(null); // Track hovered item
 
   const navItems = [
     { id: 1, text: "Home" },
@@ -163,11 +152,10 @@ function Navbar() {
     <>
       <div
         name="Navbar"
-        className="max-w-screen-2xl container mx-auto px-4 md:px-12 h-16 fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-white/70 border-b border-gray-200 shadow-sm"
+        className="max-w-screen-2xl container mx-auto px-4 md:px-12 h-16 shadow-md fixed top-0 left-0 right-0 z-50 bg-white"
       >
         <div className="flex justify-between items-center h-16">
-          {/* Logo & Name */}
-          <div className="flex space-x-2 items-center">
+          <div className="flex space-x-2">
             <a
               href="https://codolio.com/profile/Special%20Force"
               target="_blank"
@@ -176,18 +164,20 @@ function Navbar() {
               <img src={pic} className="h-12 w-11 rounded-full" alt="Profile" />
             </a>
             <h1 className="font-semibold text-xl">
-              <span className="bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent text-2xl font-bold">S</span>atyam
-              <p className="text-sm text-gray-600">Computer Engineer</p>
+            <span className="bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent text-2xl font-bold">S</span>atyam
+              <p className="text-sm">Computer Engineer</p>
             </h1>
           </div>
 
-          {/* Desktop Navigation */}
+          {/* ------------------Desktop Navbar------------------- */}
           <div>
-            <ul className="hidden md:flex space-x-6 text-[17px] font-medium">
+            <ul className="hidden md:flex space-x-4">
               {navItems.map(({ id, text }) => (
                 <li
                   key={id}
-                  className="relative group transition-all duration-300 cursor-pointer"
+                  className="relative cursor-pointer transition-all duration-300"
+                  onMouseEnter={() => setHoveredSection(text)}
+                  onMouseLeave={() => setHoveredSection(null)}
                 >
                   <Link
                     to={text}
@@ -195,70 +185,82 @@ function Navbar() {
                     duration={500}
                     offset={-70}
                     spy={true}
+                    activeClass="active"
                     onSetActive={() => setActiveSection(text)}
-                    className={`block px-2 py-1 transition duration-300 ${
-                      activeSection === text
-                        ? "bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent"
-                        : "text-gray-800"
-                    }`}
+                    className="block px-2 py-1"
                   >
                     {text}
                   </Link>
 
-                  {/* Underline */}
+                  {/* Hover Effect (Follows Cursor, Falls Back to Active Section) */}
+                  {/* <span
+                    className={`absolute inset-0 -z-10 rounded-md transition-all duration-300 
+                    ${
+                      hoveredSection === text
+                        ? "bg-gray-200" // Show hover effect on hovered item
+                        : activeSection === text
+                        ? "bg-gray-300" // Show active section when not hovering
+                        : ""
+                    }`}
+                  /> */}
+
                   <span
-                    className={`absolute bottom-0 left-0 w-full h-0.5 rounded-full bg-gradient-to-r from-teal-400 to-blue-500 transform origin-left transition-transform duration-300 ${
-                      activeSection === text
-                        ? "scale-x-100"
-                        : "scale-x-0 group-hover:scale-x-100"
+                    className={`absolute inset-0 -z-10 rounded-md transition-all duration-300 
+                    ${
+                      hoveredSection === text
+                        ? "bg-blue-200 text-gray-800" // Stylish hover effect
+                        : activeSection === text
+                        ? "bg-gradient-to-r from-teal-400 to-blue-500 text-white" // Active section highlight
+                        : ""
                     }`}
                   ></span>
+
+
                 </li>
               ))}
             </ul>
-
-            {/* Mobile Menu Toggle */}
-            <div onClick={() => setMenu(!menu)} className="md:hidden cursor-pointer">
-              {menu ? <IoClose size={26} /> : <IoMenuSharp size={26} />}
+            <div onClick={() => setMenu(!menu)} className="md:hidden">
+              {menu ? <IoClose size={24} /> : <IoMenuSharp size={24} />}
             </div>
           </div>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* ------------------Mobile Navbar------------------- */}
         {menu && (
-          <div className="bg-white/80 backdrop-blur-lg absolute top-16 left-0 w-full shadow-md">
-            <ul className="md:hidden flex flex-col h-screen items-center justify-center space-y-5 text-lg font-medium">
+          <div className="bg-transparent backdrop-blur-lg absolute top-16 left-0 w-full">
+            <ul className="md:hidden flex flex-col h-screen items-center justify-center space-y-3 text-xl">
               {navItems.map(({ id, text }) => (
                 <li
                   key={id}
-                  className="relative group"
-                  onClick={() => {
-                    setMenu(false);
-                    setActiveSection(text);
-                  }}
+                  className="relative cursor-pointer transition-all duration-300"
+                  onMouseEnter={() => setHoveredSection(text)}
+                  onMouseLeave={() => setHoveredSection(null)}
                 >
                   <Link
+                    onClick={() => {
+                      setMenu(false);
+                      setActiveSection(text);
+                    }}
                     to={text}
                     smooth={true}
                     duration={500}
                     offset={-70}
                     spy={true}
-                    className={`block px-4 py-2 transition duration-300 ${
-                      activeSection === text
-                        ? "bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent"
-                        : "text-gray-800"
-                    }`}
+                    activeClass="active"
+                    className="block px-4 py-2"
                   >
                     {text}
                   </Link>
 
+                  {/* Hover Effect (Same Logic for Mobile) */}
                   <span
-                    className={`absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-teal-400 to-blue-500 transform origin-left transition-transform duration-300 ${
-                      activeSection === text
-                        ? "scale-x-100"
-                        : "scale-x-0 group-hover:scale-x-100"
+                    className={`absolute inset-0 -z-10 rounded-md transition-all duration-300 
+                    ${
+                      hoveredSection === text
+                        ? "bg-gradient-to-r from-teal-400 to-blue-500 text-white" // Active section highlight
+                        : ""
                     }`}
-                  ></span>
+                  />
                 </li>
               ))}
             </ul>
@@ -270,3 +272,5 @@ function Navbar() {
 }
 
 export default Navbar;
+
+
