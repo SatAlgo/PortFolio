@@ -42,7 +42,7 @@ function About() {
         </button> */}
 
         <a
-          href="../public/resume.html"
+          href="https://satalgo.github.io/Resume/"
           className="w-full sm:w-auto sm:min-w-[160px] text-center bg-gradient-to-r from-green-600 to-teal-500 hover:from-teal-500 hover:to-green-600 text-white font-semibold text-lg px-6 py-2 rounded-md shadow-md transition duration-300"
         >
           View Resume
