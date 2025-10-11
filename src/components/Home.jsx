@@ -78,7 +78,7 @@ function Home() {
                       href="https://discord.com/invite/epSdN86X"
                       target="_blank"
                     >
-                      <SiDiscord className="text-2xl cursor-pointer" />
+                      <SiDiscord className="text-blurple text-2xl cursor-pointer" />
                     </a>
                   </li>
                   {/* <li>
