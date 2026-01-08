@@ -5,6 +5,7 @@ import codechef from "../../public/codechef.png";
 import blackleet from "../../public/blackleet.png";
 import g4g from "../../public/g4g.logo.jpg";
 import interviewbit from "../../public/ib.jpg";
+import hackerrank from "../../public/hackerrank.png";
 
 function Experience() {
   const cardItem = [
@@ -17,25 +18,26 @@ function Experience() {
     },
     {
       id: 2,
+      logo: blackleet,
+      name: "Leetcode",
+      url: "https://leetcode.com/u/samAlgo/",
+      info: "Click to view profile activity",
+    },
+    {
+      id: 3,
       logo: codeforces,
       name: "Codeforces",
       url: "https://codeforces.com/profile/SatAlgo",
       info: "305+ questions solved\nMax rating: 902",
     },
     {
-      id: 3,
+      id: 4,
       logo: codechef,
       name: "Codechef",
       url: "https://www.codechef.com/users/explicitcode",
       info: "Click to view profile activity",
     },
-    {
-      id: 4,
-      logo: blackleet,
-      name: "Leetcode",
-      url: "https://leetcode.com/u/samAlgo/",
-      info: "Click to view profile activity",
-    },
+    
     {
       id: 5,
       logo: g4g,
@@ -49,6 +51,13 @@ function Experience() {
       name: "InterviewBit",
       url: "https://www.interviewbit.com/profile/satyam-gaikwad/",
       info: "Click to view profile activity",
+    },
+    {
+      id: 7,
+      logo: hackerrank,
+      name: "Hackerrank",
+      url: "https://www.hackerrank.com/profile/satyam_m_gaikwad/",
+      info: "2 Stars in Problem Solving",
     }
   ];
 

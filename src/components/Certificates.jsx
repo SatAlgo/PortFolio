@@ -6,21 +6,77 @@ function Certificates() {
   const certList = [
     {
       id: 1,
+      title: "Privacy and Security in Online Social Media",
+      platform: "NPTEL, Skill India",
+      date: "Jul-Oct 2025",
+      image: "/certificates/Privacy_and_Security_in_OSM_NPTEL.png",
+    },
+    {
+      id: 2,
       title: "IR4.0 Technologies Certification",
       platform: "Microsoft, SAP & Edunet Foundation",
       date: "(2024-25)",
       image: "/certificates/IR4.0.jpg",
     },
     {
-    id: 2,
+      id: 3,
       title: "Technology Job Simulation - Coding Development",
       platform: "Deloitte (via Forage)",
       date: "July 7th, 2025",
       image: "/certificates/Deloitte_TJS.png",
     },
     {
-      id: 3,
-      title: "Successful completion of a Life Skills Development Program",
+      id: 4,
+      title: "Virtual Internship Program in Networking",
+      platform: "Cisco",
+      date: "June – August 2025",
+      image: "/certificates/Networking_Cisco.png",
+    },
+    {
+      id: 5,
+      title: "Basic Introduction to Linux Course",
+      platform: "Simplilearn",
+      date: "Nov 25th, 2023",
+      image: "/certificates/Basics_of_Linux_Simplilearn.png",
+    },
+    {
+      id: 6,
+      title: "Cybersecurity",
+      platform: "Infosys, Srtingboard",
+      date: "August 20, 2024",
+      image: "/certificates/Cybersecurity_Infosys.png",
+    },
+    {
+      id: 7,
+      title: "JavaScript",
+      platform: "Infosys, Srtingboard",
+      date: "Nov 06, 2025",
+      image: "/certificates/Javascript_Infosys.png",
+    },
+    {
+      id: 8,
+      title: "ReactJS",
+      platform: "Infosys, Springboard",
+      date: "Oct 30, 2025",
+      image: "/certificates/ReactJS_Infosys.png",
+    },
+    {
+      id: 9,
+      title: "Networking and Security Professional",
+      platform: "L&T EduTech",
+      date: "(2025)",
+      image: "/certificates/Networking_and_Security_Professional_LT.png",
+    },
+    {
+      id: 10,
+      title: "Mastering the Linux",
+      platform: "L&T EduTech",
+      date: "(2025)",
+      image: "/certificates/Mastering_the_Linux_LT.png",
+    },
+    {
+      id: 11,
+      title: "Life Skills Development Program",
       platform: "Skill Matrix",
       date: "(10th Jan, 2025 - 25th Jan, 2025)",
       image: "/certificates/LifeSkills.png",
@@ -55,23 +111,39 @@ function Certificates() {
       </div>
 
       {activeCertificate && (
-        <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 px-4 py-8 overflow-auto">
-          <div className="relative bg-white rounded-lg max-w-3xl w-full max-h-[90vh] overflow-y-auto p-4 shadow-xl">
+        <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 px-4 py-8">
+          {/* Background Overlay - clicking this also closes the modal */}
+          <div 
+            className="absolute inset-0" 
+            onClick={() => setActiveCertificate(null)}
+          ></div>
+
+          <div className="relative bg-white rounded-xl max-w-4xl w-full max-h-[95vh] overflow-hidden flex flex-col shadow-2xl z-10">
+            
+            {/* Close Button - Using "Hot Pink" or "Amber" to contrast most corporate certs */}
             <button
               onClick={() => setActiveCertificate(null)}
-              className="absolute top-2 right-4 text-3xl font-bold text-gray-600 hover:text-black"
+              className="absolute top-3 right-4 z-20 bg-pink-600 hover:bg-pink-700 text-white w-10 h-10 rounded-full flex items-center justify-center text-2xl font-bold shadow-lg transition-colors"
+              aria-label="Close"
             >
               &times;
             </button>
-            <img
-              src={activeCertificate.image}
-              alt={activeCertificate.title}
-              className="w-full max-h-[80vh] object-contain mx-auto"
-            />
-            <div className="text-center mt-4">
+
+            {/* Image Container with Padding and Background Contrast */}
+            <div className="p-6 bg-gray-100 flex-grow flex items-center justify-center overflow-auto">
+              <img
+                src={activeCertificate.image}
+                alt={activeCertificate.title}
+                /* Added border, shadow, and rounded corners to the image itself */
+                className="max-w-full max-h-[70vh] object-contain shadow-2xl border border-gray-300 rounded-sm bg-white"
+              />
+            </div>
+
+            {/* Footer Info */}
+            <div className="text-center p-6 bg-white border-t border-gray-100">
               <h2 className="text-xl font-bold text-gray-800">{activeCertificate.title}</h2>
-              <p className="text-sm text-gray-600">
-                {activeCertificate.platform} | {activeCertificate.date}
+              <p className="text-sm text-gray-600 mt-1">
+                {activeCertificate.platform} <span className="mx-2 text-gray-300">|</span> {activeCertificate.date}
               </p>
             </div>
           </div>
